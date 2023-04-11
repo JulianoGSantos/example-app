@@ -49,7 +49,7 @@
                         <input type="text" name="district">
                     
                         <label>Cidade: </label>
-                        <input type="text"  name="city" >
+                        <input type="text"  name="city">
                     </div>
                 </main>
             </div>
