@@ -54,7 +54,7 @@
                 </main>
             </div>
         <footer>
-            <input type="submit" value="cadastrar" size="20px">
+            <input type="submit" value="cadastrar" size="20px" >
             <input type="reset" value="limpar">
         </footer>
     </form>
