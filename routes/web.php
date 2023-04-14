@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\UserController;
+use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +23,5 @@ Route::get('/', function () {
 Route::get('/inicio', [ClientController::class, 'start'])->name('start');
 Route::get('/cliente', [ClientController::class, 'clientindex'])->name('client-index');
 Route::post('/cliente/form', [ClientController::class, 'clientform'])->name('client-form');
+
+Route::get('/bootstrap', [ClientController::class, 'teste'])->name('teste');

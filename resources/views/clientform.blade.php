@@ -8,56 +8,67 @@
     <title>Sistema Controle</title>
 </head>
 <body>
-<div class="container col-12">
-    <form action="{{ route('client-form') }}" method="post">
-        @csrf
-        <header>
-            <h4>SISTEMA CONTROLE</h4>
-        </header>
-        <h5>CADASTRO DE CLIENTES</h5>
-            <div class="row">
-                <main class="cliente">
-                    <div class="col-12 col-sm-6 col-md-4"> 
-                        <label>Nome: </label>
-                        <input type="text" name="name">
-                    
-                        <label>Cpf: <label>
-                        <input type="text" name="cpf">
-                   
-                        <label>Rg: </label>
-                        <input type="text" name="rg">
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4">    
-                        <label>Celular: </label>
-                        <input type="text" name="fone">
-                   
-                        <label>Celular 2: </label>
-                        <input type="text" name="celfone">
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4">
-                        <label>Cep: </label>
-                        <input type="text" name="cep">
-                    
-                        <label>Rua: </label>
-                        <input type="text"  name="street">
-                    
-                        <label>Número: </label>
-                        <input type="text" name="number">
-                        </div>
-                    <div class="col-12 col-sm-6 col-md-4">
-                        <label>Bairro: </label>
-                        <input type="text" name="district">
-                    
-                        <label>Cidade: </label>
-                        <input type="text"  name="city">
-                    </div>
-                </main>
+    <div class="container">
+        <div class="row">
+            <div class="col-12"> 
+                <header>
+                    <h4>SISTEMA CONTROLE</h4>
+                </header> 
+                <h5>CLIENTES</h5>
             </div>
-        <footer>
-            <input type="submit" value="cadastrar" size="20px" >
-            <input type="reset" value="limpar">
-        </footer>
-    </form>
-</div>
+            <div class="col-md-6">  
+                <form action="{{ route('client-form') }}" method="post">
+                @csrf
+                <div class="col-md-6">
+                    <main>
+                        <div class="col-md-6">
+                        <fieldset>
+                            <legend>Cadastro de clientes</legend>
+                            <div class="row">
+                            <div class="col-md-6">
+                                <label for="xname">Nome: </label>
+                                <input type="text" name="name" id="xname">
+                            </div>
+                            <div class="col-md-4">
+                            <label for="xcpf">CPF: </label>
+                            <input type="text"  name="cpf" id="xcpf">
+                            </div>
+                            <div class="col-md-2">
+                            <label for="xrg">RG: </label>
+                            <input type="text" name="rg" id="xrg">
+                            </div>
+                            </div>
+                            <label for="xfone">Celular: </label>
+                            <input type="text" name="fone" id="xfone">
+
+                            <label for="xcelfone">Celular 2: </label>
+                            <input type="text" name="celfone" id="xcelfone">
+
+                            <label for="xcep">Cep: </label>
+                            <input type="text" name="cep" id="xcep">
+
+                            <label for="xstreet">Rua: </label>
+                            <input type="text" name="street" id="xstreet">
+
+                            <label for="xnumber">Número: </label>
+                            <input type="text" name="number" id="xnumber">
+
+                            <label for="xdistrict">Bairro: </label>
+                            <input type="text" name="district" id="xdistrict">
+
+                            <label for="xcity">Cidade: </label>
+                            <input type="text" name="city" id="xcity">
+                        </fieldset>
+                        </div>
+                    </main>
+                    </div>
+                    <footer>
+                        <input type="submit" value="cadastrar" size="20px" >
+                        <input type="reset" value="limpar">
+                    </footer>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

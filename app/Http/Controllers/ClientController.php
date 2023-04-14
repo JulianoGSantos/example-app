@@ -8,6 +8,9 @@ use App\Models\Client;
 
 class ClientController extends Controller
 {
+    public function teste(){
+        return view('boots');
+    }
     public function start(){
         return view('inicio');
     }

@@ -106,3 +106,7 @@ footer{
     justify-content: center;
     align-items: center;
 }
+
+legend{
+    color: darkslategrey
+}
