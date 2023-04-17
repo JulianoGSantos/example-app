@@ -18,7 +18,7 @@ class ClientController extends Controller
         return view('clientform');
     }
 
-    public function clientform(ClientRequest $request)
+    public function clientform(ClientRequest $request) 
         {
 
         $client = new Client();
