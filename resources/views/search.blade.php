@@ -14,7 +14,7 @@
     <h5>BUSCA</h5>
     <div class="frame">
         <main class="container">
-            <a href="{{ route('client-show', $data->id) }}" rel="external"><img src="/images/cliente.png" alt="">CLIENTE</a>
+            <a href="{{ route('client-show') }}" rel="external"><img src="/images/cliente.png" alt="">CLIENTE</a>
             <a href="https://www.google.com" target="_blank" rel="external"><img src="/images/caixa.png" alt="">CAIXA</a>
             <a href="https://www.google.com" target="_blank" rel="external"><img src="/images/produto.png" alt="">PRODUTO</a>
             <a href="https://www.google.com" target="_blank" rel="external"><img src="/images/usuario.png" alt="">USUÁRIO</a>

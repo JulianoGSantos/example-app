@@ -23,7 +23,7 @@ Route::get('/', function () {
 Route::get('/cliente/{id}', [ClientController::class, 'clientshow'])->name('client-show');
 Route::post('/cliente/form', [ClientController::class, 'clientform'])->name('client-form');
 Route::get('/cliente', [ClientController::class, 'clientindex'])->name('client-index');
-Route::view('/search')->name('search');
+Route::view('/search', 'search')->name('search');
 Route::get('/inicio', [ClientController::class, 'start'])->name('start');
 
 Route::get('/bootstrap', [ClientController::class, 'teste'])->name('teste');

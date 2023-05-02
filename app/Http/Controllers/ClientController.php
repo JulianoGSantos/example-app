@@ -38,7 +38,7 @@ class ClientController extends Controller
         return redirect('/inicio');
     }
 
-    public function show(string|int $id)
+    public function clientshow(Client $data, string|int $id)
     {
         if(!$data = Client::find($id)){
         return back();
