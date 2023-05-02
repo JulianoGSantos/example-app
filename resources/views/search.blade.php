@@ -11,10 +11,10 @@
     <header>    
         <h4>SISTEMA CONTROLE</h4>
     </header>
-    <h5>HOME</h5>
+    <h5>BUSCA</h5>
     <div class="frame">
         <main class="container">
-            <a href="{{ route('client-index') }}" rel="external"><img src="/images/cliente.png" alt="">CLIENTE</a>
+            <a href="{{ route('client-show', $data->id) }}" rel="external"><img src="/images/cliente.png" alt="">CLIENTE</a>
             <a href="https://www.google.com" target="_blank" rel="external"><img src="/images/caixa.png" alt="">CAIXA</a>
             <a href="https://www.google.com" target="_blank" rel="external"><img src="/images/produto.png" alt="">PRODUTO</a>
             <a href="https://www.google.com" target="_blank" rel="external"><img src="/images/usuario.png" alt="">USUÁRIO</a>
@@ -22,7 +22,6 @@
     </div>
    <footer>
         <a href="https://www.youtube.com/watch?v=LeOVXQDsAIY&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=27" target="_blank" rel="external">curso em video</a><br>
-        <a href="{{ route('search') }}">BUSCA</a>
    </footer>
 </body>
 </html>

@@ -11,18 +11,33 @@
     <header>    
         <h4>SISTEMA CONTROLE</h4>
     </header>
-    <h5>HOME</h5>
+    <h5>CLIENTE CÓD: {{ $data->id}} </h5>
     <div class="frame">
         <main class="container">
-            <a href="{{ route('client-index') }}" rel="external"><img src="/images/cliente.png" alt="">CLIENTE</a>
-            <a href="https://www.google.com" target="_blank" rel="external"><img src="/images/caixa.png" alt="">CAIXA</a>
-            <a href="https://www.google.com" target="_blank" rel="external"><img src="/images/produto.png" alt="">PRODUTO</a>
-            <a href="https://www.google.com" target="_blank" rel="external"><img src="/images/usuario.png" alt="">USUÁRIO</a>
+            name',
+        'cpf',
+        'rg',
+        'street',
+        'number',
+        'district',
+        'city',
+        'fone',
+        'celfone'
+            <ul>
+                <li> NOME: </li>
+                <li> CPF: </li>
+                <li> RG: </li>
+                <li> RUA:</li>
+                <li> NÚMERO: </li>
+                <li> BAIRRO: </li>
+                <li> CIDADE: </li>
+                <li> CELULAR: </li>
+                <li> CELULAR 2:</li>
+            </ul>
         </main>
     </div>
    <footer>
         <a href="https://www.youtube.com/watch?v=LeOVXQDsAIY&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=27" target="_blank" rel="external">curso em video</a><br>
-        <a href="{{ route('search') }}">BUSCA</a>
    </footer>
 </body>
 </html>
