@@ -20,8 +20,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/inicio', [ClientController::class, 'start'])->name('start');
-Route::get('/cliente', [ClientController::class, 'clientindex'])->name('client-index');
+
 Route::post('/cliente/form', [ClientController::class, 'clientform'])->name('client-form');
+Route::get('/cliente', [ClientController::class, 'clientindex'])->name('client-index');
+Route::get('/inicio', [ClientController::class, 'start'])->name('start');
 
 Route::get('/bootstrap', [ClientController::class, 'teste'])->name('teste');
