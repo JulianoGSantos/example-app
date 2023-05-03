@@ -25,6 +25,11 @@
                 <li> CELULAR: {{ $data->fone}} </li>
                 <li> CELULAR 2: {{ $data->celfone}} </li>
             </ul>
+            <form action="{{ route('client-destroy', $data->id) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button type="submit" value="Deletar" size=14>Deletar</button>
+            </form>
         </main>
     </div>
    <footer>

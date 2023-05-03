@@ -19,9 +19,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::delete('/cliente/{id}', [ClientController::class, 'clientdestroy'])->name('client-destroy');
+
 Route::get('/cliente/busca', [ClientController::class, 'clientsearch'])->name('client-search');
 Route::get('/cliente/{id}', [ClientController::class, 'clientshow'])->name('client-show');
+Route::delete('/cliente/{id}', [ClientController::class, 'clientdestroy'])->name('client-destroy');
 Route::post('/cliente/form', [ClientController::class, 'clientform'])->name('client-form');
 Route::get('/cliente', [ClientController::class, 'clientindex'])->name('client-index');
 Route::get('/busca', [ClientController::class, 'search'])->name('search');

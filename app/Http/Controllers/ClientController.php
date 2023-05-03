@@ -60,7 +60,7 @@ class ClientController extends Controller
     public function clientdestroy(Client $data, string|int $id)
     {
         if(!$data = Client::find($id)){
-            return back();
+        return back();
         }
         $data->delete();
         return redirect()->route('start');   
