@@ -23,7 +23,7 @@
                     <td> {{$item->id}} </td>
                     <td> {{$item->name}} </td>         
                     <td>
-                        <a href="">detalhes</a>    
+                        <a href="{{ route('client-show', $item->id) }}">detalhes</a>    
                     </td>   
                 </tr>
             @endforeach

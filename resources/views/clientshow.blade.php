@@ -9,21 +9,21 @@
 </head>
 <body>
     <header>    
-        <h4>SISTEMA CONTROLE</h4>
+        <h4><a href="{{ route('start') }}">SISTEMA CONTROLE</a></h4>
     </header>
     <h5>CLIENTE CÓD: {{ $data->id}} </h5>
     <div class="frame">
         <main class="container">
             <ul>
-                <li> NOME: </li>
-                <li> CPF: </li>
-                <li> RG: </li>
-                <li> RUA:</li>
-                <li> NÚMERO: </li>
-                <li> BAIRRO: </li>
-                <li> CIDADE: </li>
-                <li> CELULAR: </li>
-                <li> CELULAR 2:</li>
+                <li> NOME: {{ $data->name}} </li>
+                <li> CPF: {{ $data->cpf}} </li>
+                <li> RG: {{ $data->rg}} </li>
+                <li> RUA: {{ $data->street}} </li>
+                <li> NÚMERO: {{ $data->number}} </li>
+                <li> BAIRRO: {{ $data->district}} </li>
+                <li> CIDADE: {{ $data->city}} </li>
+                <li> CELULAR: {{ $data->fone}} </li>
+                <li> CELULAR 2: {{ $data->celfone}} </li>
             </ul>
         </main>
     </div>

@@ -56,4 +56,13 @@ class ClientController extends Controller
         }
         return view('clientshow', compact('data'));
     }
+
+    public function clientdestroy(Client $data, string|int $id)
+    {
+        if(!$data = Client::find($id)){
+            return back();
+        }
+        $data->delete();
+        return redirect()->route('start');   
+    }
 }
