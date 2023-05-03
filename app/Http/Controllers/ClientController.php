@@ -12,21 +12,19 @@ class ClientController extends Controller
         return view('boots');
     }
 
-    public function indexclient(Client $info)
-    {
-        $infos = $info->all();
-        return view('cilentsearch', compact('infos'));
-    }
-
     public function start(){
         return view('inicio');
     }
+
     public function search(){
         return view('search');
     }
-    public function clientsearch(){
-        return view('clientsearch');
+
+    public function clientsearch(Client $info){
+        $infos = $info->all();
+        return view('clientsearch', compact('infos'));
     }
+
     public function clientindex(){
         return view('clientform');
     }

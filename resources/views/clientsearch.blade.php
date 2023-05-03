@@ -9,8 +9,9 @@
 </head>
 <body>
     <header>    
-        <h4>SISTEMA CONTROLE</h4>
+        <h4><a href="{{ route('start') }}">SISTEMA CONTROLE</a></h4>
     </header>
+    <h4>LISTA DOS CLIENTES</h4>
     <table>
         <thead>
             <th>ID</th>
@@ -20,8 +21,11 @@
             @foreach ($infos as $item)
                 <tr>
                     <td> {{$item->id}} </td>
-                    <td> {{$item->name}} </td>
-                </tr>                
+                    <td> {{$item->name}} </td>         
+                    <td>
+                        <a href="">detalhes</a>    
+                    </td>   
+                </tr>
             @endforeach
         </tbody>
     </table>
