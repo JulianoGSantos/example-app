@@ -11,22 +11,20 @@
     <header>    
         <h4>SISTEMA CONTROLE</h4>
     </header>
-    <h5>CLIENTE CÓD: {{ $data->id}} </h5>
-    <div class="frame">
-        <main class="container">
-            <ul>
-                <li> NOME: </li>
-                <li> CPF: </li>
-                <li> RG: </li>
-                <li> RUA:</li>
-                <li> NÚMERO: </li>
-                <li> BAIRRO: </li>
-                <li> CIDADE: </li>
-                <li> CELULAR: </li>
-                <li> CELULAR 2:</li>
-            </ul>
-        </main>
-    </div>
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>NOME</th>
+        </thead>
+        <tbody>
+            @foreach ($infos as $item)
+                <tr>
+                    <td> {{$item->id}} </td>
+                    <td> {{$item->name}} </td>
+                </tr>                
+            @endforeach
+        </tbody>
+    </table>
    <footer>
         <a href="https://www.youtube.com/watch?v=LeOVXQDsAIY&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=27" target="_blank" rel="external">curso em video</a><br>
    </footer>
