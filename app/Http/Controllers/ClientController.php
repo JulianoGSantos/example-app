@@ -8,21 +8,12 @@ use App\Models\Client;
 
 class ClientController extends Controller
 {
-    public function teste(){
-        return view('boots');
-    }
-
     public function start(){
         return view('inicio');
     }
 
     public function search(){
         return view('search');
-    }
-
-    public function clientsearch(Client $info){
-        $infos = $info->all();
-        return view('clientsearch', compact('infos'));
     }
 
     public function clientindex(){
@@ -47,6 +38,11 @@ class ClientController extends Controller
         $client->save();
 
         return redirect('/inicio');
+    }
+
+    public function clientsearch(Client $info){
+        $infos = $info->all();
+        return view('clientsearch', compact('infos'));
     }
 
     public function clientshow(Client $data, string|int $id)
