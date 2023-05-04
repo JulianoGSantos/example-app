@@ -53,6 +53,25 @@ class ClientController extends Controller
         return view('clientshow', compact('data'));
     }
 
+    public function clientedit(Client $data, string|int $id)
+    {
+        if(!$data = Client::find($id)){
+            return back();
+        }
+        return view('clientedit', compact('data'));
+    }
+
+    public function clientupdate(ClientRequest $request, Client $data, string|int $id)
+    {
+        if(!$data = Client::find($id)){
+            return back();
+        }
+        $data->update($request->only([
+            'name', 'cpf', 'rg', 'street', 'number', 'district', 'city', 'fone', 'celfone'
+        ]));
+        return redirect()->route('start');
+    }
+
     public function clientdestroy(Client $data, string|int $id)
     {
         if(!$data = Client::find($id)){

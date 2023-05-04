@@ -14,7 +14,7 @@
     <h4>LISTA DOS CLIENTES</h4>
     <table>
         <thead>
-            <th>ID</th>
+            <th>CÓD</th>
             <th>NOME</th>
         </thead>
         <tbody>
@@ -23,7 +23,8 @@
                     <td> {{$item->id}} </td>
                     <td> {{$item->name}} </td>         
                     <td>
-                        <a href="{{ route('client-show', $item->id) }}">detalhes</a>    
+                        <a href="{{ route('client-show', $item->id) }}">detalhes</a>  
+                        <a href="{{ route('client-edit', $item->id) }}">editar</a> 
                     </td>   
                 </tr>
             @endforeach
